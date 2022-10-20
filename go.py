@@ -1,5 +1,5 @@
 #!/bin/python
-
+import RuntimeSetup
 
 class GoIshi:
   """ The Go-Ishi are the stones placed upon the Go-Ban.
@@ -32,11 +32,14 @@ class GoIshi:
 
     -individual:    Number of groups that contain two or more eyes.
   """
-  def __init__(self, player_one="", player_two=""):
+  def __init__(self, player_one=" ", player_two=" "):
+
+    self.player_one = player_one
+    self.player_two = player_two
 
     self.Black = {
       "symbol": "\u26AB",
-      "player": player_one,
+      "player":player_one,
       "prisoners": 0,
       "points": 0,
       "groups": [],
@@ -54,30 +57,28 @@ class GoIshi:
       "individual": 0,
     }
 
-    if self.__testing__(): pass
-    else:
-      class TestFailure("The testing suite failed to complete."): exit
+    if __name__ ==" __main__": self.__testing__()
 
 
   def __testing__(self):
 
-    assert self.Black
-    assert self.Black['symbol'] == "⚫"
-    assert self.Black['player'] == player_one
-    assert self.Black['prisoners'] == 0
-    assert self.Black['points'] == 0
-    assert type(self.Black['groups']) == list
-    assert self.Black['living'] == 0
-    assert self.Black['individual'] == 0
+    assert self.Black, "Should be GoIshi.Black."
+    assert self.Black['symbol'] == "⚫", "Should be a black circle emoji."
+    assert self.Black['player'] == self.player_one, "Should be GoIshi.player_one."
+    assert self.Black['prisoners'] == 0, "Should be 0."
+    assert self.Black['points'] == 0, "Should be 0."
+    assert type(self.Black['groups']) == list, "Should be list."
+    assert self.Black['living'] == 0, "Should be 0."
+    assert self.Black['individual'] == 0, "Should be 0."
 
-    assert self.White
-    assert self.White['symbol'] == "⚪"
-    assert self.White['player'] == player_two
-    assert self.White['prisoners'] == 0
-    assert self.White['points'] == 0
-    assert type(self.White['groups']) == list
-    assert self.White['living'] == 0
-    assert self.White['individual'] == 0
+    assert self.White, "Should be GoIshi.White"
+    assert self.White['symbol'] == "⚪", "Should be a white circle emoji."
+    assert self.White['player'] == self.player_two, "Should be GoIshi.player_two."
+    assert self.White['prisoners'] == 0, "Should be 0."
+    assert self.White['points'] == 0, "Should be 0."
+    assert type(self.White['groups']) == list, "Should be list."
+    assert self.White['living'] == 0, "Should be 0."
+    assert self.White['individual'] == 0, "Should be 0."
 
 
 
@@ -86,7 +87,18 @@ class GoIshi:
 class GoBan:
   """ The Go-Ban is the board upon which the Go-Ishi are placed.
 
-  To set up the board, we initialize a grid of 19 by 19 spaces.
+  Unlike Chess, Black goes first, then White.  Also unlike Chess, turns are counted by the individual
+  moves as opposed to move-response pairs;  i.e, Blacks first move is considered to be turn one, while
+  Whites first move is turn two.
+
+  To set up the board we initialize a dictionary of 'positions' numbered 1.1 through 19.19,
+  for a total of 361 uniquely identified key:value pairs by calling GoBan.Initialize_Empty_Board()
+  from GoBan.__init__().
+
+  Play is simulated by writing either GoIshi.Black['symbol'] or GoIshi.White['symbol'] to any of these
+  positions not currently occupied by a symbol.  When a positions (X+-1).(Y+-1) become occupied by an
+  opposing players symbols, the X.Y position in question is overwritten by the None type and returns to
+  a state of playability.
   """
   def __init__(self):
 
@@ -95,30 +107,28 @@ class GoBan:
     self.Black = self.GoIshi.Black['symbol']
     self.White = self.GoIshi.White['symbol']
 
-    # Start the turn counter.
+    # Count the number of turns.
+    # This will continue to increment by one as moves are taken.
     self.Turn = 0
 
-    # Since Black moves first, even numbered
-    # turns indicate it is Blacks move.
+    # Since Black moves first, even numbered turns indicate it is Blacks move.
     if self.Turn % 2 == 0: self.Move = self.Black
     else: self.Move = self.White
 
-    # The Board object is a dictionary to be filled with
-    # 361 coordinate keys; again, labelled 1.1 through 19.19.
-    # Every coordinate starts off as the None type.
+    # Create the board; populate it with 361 positions.
     self.Board = {}; self.Initialize_Empty_Board()
 
-    if self.__testing__(): pass
-    else: class TestFailure("The testing suite failed to complete."); exit
+    if __name__ ==" __main__": self.__testing__()
 
 
   def __testing__(self):
+      assert self.Board, "Should be GoBan.Board"
       # 19x19 = 361
-      assert len(self.Board) == 361
+      assert len(self.Board) == 361, "Should be 361."
       # No moves have been taken yet.
-      assert self.Turn == 0
+      assert self.Turn == 0, "Should be 0."
       # It is currently Black's turn.
-      assert self.Move == True
+      assert self.Move == self.Black, "Should be Black."
 
 
   def Initialize_Empty_Board(self):
@@ -155,7 +165,7 @@ class GoBan:
       self.GoIshi.Black["prisoners"] += 1
 
     # Why was this function called on an empty position?
-    else: exit()# Here's where we should implement a custom exception.
+    else: pass# Here's where we should implement a custom exception.
 
     self.Board[position] = None
 
@@ -191,7 +201,8 @@ class GoSeki():
       X = int(point[0])
       Y = int(point[1])
 
-      if X or Y <= 0 or > 19: pass
+      if X or Y <= 0: pass
+      elif X or Y > 19: pass
       else: dame.append(direction)      
 
     return dame
@@ -201,3 +212,13 @@ class GoSeki():
   def Enumerate_Stone_Liberties(self, position):
     coordinates = position.split(".")
   """
+
+class TestingSuite:
+  def __init__(self):
+
+    self.Go = GoBan()
+
+    for position in self.Go.Board:
+      print(position)
+
+TestingSuite()
