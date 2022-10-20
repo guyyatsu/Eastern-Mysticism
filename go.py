@@ -32,7 +32,7 @@ class GoIshi:
 
     -individual:    Number of groups that contain two or more eyes.
   """
-  def __init__(self, player_one="": str, player_two="": str):
+  def __init__(self, player_one="", player_two=""):
 
     self.Black = {
       "symbol": "\u26AB",
@@ -55,7 +55,8 @@ class GoIshi:
     }
 
     if self.__testing__(): pass
-    else: class TestFailure("The testing suite failed to complete."); exit
+    else:
+      class TestFailure("The testing suite failed to complete."): exit
 
 
   def __testing__(self):
