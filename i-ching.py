@@ -437,6 +437,43 @@ class iChing:
       }
 
       # Li-Based Hexagrams; 14, 21, 30, 35, 38, 50, 56, 64
+
+      self.Li = {
+        "Number": 30,
+        "Figure": "䷝ ",
+        "Name": "Lì",
+        "Character": "離",
+        "Translation": "Radiance",
+        "Formation": [
+          self.Trigrams.Li,
+          self.Trigrams.Li
+        ],
+      }
+
+      self.Dayou = {
+        "Number": 14,
+        "Figure": "䷍ ",
+        "Name": "Dàyǒu",
+        "Character": "大有",
+        "Translation": "Great Possessing",
+        "Formation": [
+          self.Trigrams.Li,
+          self.Trigrams.Qian
+        ],
+      }
+
+      self.Shihe = {
+        "Number": 45,
+        "Figure": "䷔ ",
+        "Name": "Shìhé",
+        "Character": "噬嗑",
+        "Translation": "Gnawing Bite",
+        "Formation": [
+          self.Trigrams.Li,
+          self.Trigrams.Zhen
+        ],
+      }
+
       # Zhen-Based Hexagrams;
       # Xun-Based Hexagrams; 
       # Kan-Based Hexagrams;
