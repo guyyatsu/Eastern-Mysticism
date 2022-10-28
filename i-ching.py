@@ -474,6 +474,33 @@ class iChing:
         ],
       }
 
+      self.Ding = {
+        "Number": 50,
+        "Figure": "䷱ ",
+        "Name": "Dǐng",
+        "Character": "鼎",
+        "Translation": "Holding",
+        "Formation": [
+          self.Trigrams.Li,
+          self.Trigrams.Xun
+        ],
+      }
+
+      self.Weiji = {
+        "Number": 64,
+        "Figure": "䷿ ",
+        "Name": "Wèijì",
+        "Character": "未濟",
+        "Translation": [
+          self.Trigrams.Li,
+          self.Trigrams.Kan
+      }
+
+      self.Lu = {
+        "Number": 56,
+        "Figure": "䷷ ",
+        "Name": "Lǚ",
+        "
       # Zhen-Based Hexagrams;
       # Xun-Based Hexagrams; 
       # Kan-Based Hexagrams;
