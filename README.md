@@ -2,10 +2,8 @@
 This repository serves as more of a 'pet project' of mine based on a hunch I've had for a while concerning the relationsip between
 the studies of the ancient esthetic mystics and modern mathematics, analytics, and computing as a whole.
 
-## Igo
-Igo, or Go to the West, is the oldest living game still being played in it's original form.  When it first came
-to the West it was used as a tool for teaching morality to students of philosophy, but it has always been used
-for that as well in the East along with teaching battle tactics to students of kenjutsu.
+Consider that the oldest surviving texts of today are clay tablets bemoaning the poor quality of copper being sold by a man named
+Ea-Nasir; anthropologists will tell you that human-kind has remained relatively unchanged for as long as we've been keeping record.
 
 Or rather; there is nothing special about the modern man and his society aside from his tools, and how long we've been sharpening those
 tools.  What _is_ special, however, is exactly **what** tool we've been sharpening the longest: Our Minds.  Humans have been able to
@@ -50,3 +48,16 @@ Each of the Eight Trigrams represents one of the classical elements of Eastern M
   - Kan(Water)
   - Gen(Mountain)
   - Kun(Earth)
+
+
+## Igo
+Igo, or Go to the West, is the oldest living game still being played in it's original form.  When it first came
+to the West it was used as a tool for teaching morality to students of philosophy, but it has always been used
+for that as well in the East along with teaching battle tactics to students of kenjutsu.
+
+Interestingly, the game has a near-infinite complexity with the number of possible states reaching to around 100^200;
+the depths of it's permutations have consistently resisted brute-force lookup table searching algorithms such as those used
+by chess-playing algorithms for decades. So far even the best go-playing algorithms can only perform at the level
+of a moderately skilled human player at best.
+
+
