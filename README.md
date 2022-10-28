@@ -35,9 +35,9 @@ argument for binary logic in the first place, while also appealing to that 'huma
 
 
 ## The Book of Changes.
-The i-Ching is the Chinese Book of Changes; which describes a method of divinitory cleromancy as the
-practically-applied teachings of the Eastern mystics.  The book consists of a table of the eight potential
-three-digit combinations of Yin and Yang known as Trigrams, and the sixty-four Double-Trigrams called Hexagrams.
+The i-Ching is the Chinese Book of Changes; which describes a method of divinitory cleromancy as the practically-applied teachings of
+the Eastern mystics.  The book consists of a table of the eight potential three-digit combinations of Yin and Yang known as Trigrams,
+and the sixty-four Double-Trigrams called Hexagrams.
 
 Each of the Eight Trigrams represents one of the classical elements of Eastern Mysticism:  
   - Qian(Heaven)
