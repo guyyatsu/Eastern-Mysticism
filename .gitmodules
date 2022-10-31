@@ -1,3 +1,6 @@
 [submodule "igo"]
 	path = igo
 	url = git@github.com:guyyatsu/igo.git
+[submodule "iching"]
+	path = iching
+	url = git@github.com:guyyatsu/iching.git
