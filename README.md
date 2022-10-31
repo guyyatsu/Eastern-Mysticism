@@ -34,7 +34,7 @@ In much the same way that the i-Ching was written nearly _thousands_ of years be
 argument for binary logic in the first place, while also appealing to that 'human itch' that drives all innovation and spirituality.
 
 
-## The Book of Changes.
+## [The Book of Changes.](https://github.com/guyyatsu/iching)
 The i-Ching is the Chinese Book of Changes; which describes a method of divinitory cleromancy as the practically-applied teachings of
 the Eastern mystics.  The book consists of a table of the eight potential three-digit combinations of Yin and Yang known as Trigrams,
 and the sixty-four Double-Trigrams called Hexagrams.
@@ -50,7 +50,7 @@ Each of the Eight Trigrams represents one of the classical elements of Eastern M
   - Kun(Earth)
 
 
-## Igo
+## [The Game of Fives.](https://github.com/guyyatsu/igo)
 Igo, or Go to the West, is the oldest living game still being played in it's original form.  When it first came
 to the West it was used as a tool for teaching morality to students of philosophy, but it has always been used
 for that as well in the East along with teaching battle tactics to students of kenjutsu.
