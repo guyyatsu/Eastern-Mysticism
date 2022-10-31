@@ -1,0 +1,3 @@
+[submodule "igo"]
+	path = igo
+	url = git@github.com:guyyatsu/igo.git
