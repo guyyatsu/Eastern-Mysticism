@@ -1,1 +1,1 @@
-git+https://github.com/guyyatsu/TechnicalOverhead.git
+git+https://github.com/guyyatsu/LabEquipment.git
